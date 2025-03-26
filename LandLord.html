@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Property Platform - Landlord Dashboard</title>
+    
+    <!-- Correct Font Awesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-h0z55f4qZtU3uBXiL1OEEdE3qN+bcQoVO25ChOCmJ/aAkcrnj59PAgKNxPZn9EZ4Bdy1xHg+OV+5WczOr8PNcA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #e0c3fc, #8ec5fc); /* Same background as login page */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px;
+            width: 100%;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Profile and Notification Icons */
+        .header-icons {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .header-icons i {
+            font-size: 24px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .header-icons i:hover {
+            color: #cce7ff;
+        }
+
+        /* Navigation Menu */
+        nav {
+            background-color: rgba(255, 255, 255, 0.9);
+            width: 100%;
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #007BFF;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #333;
+        }
+
+        /* Welcome Section */
+        .welcome-section {
+            background-color: #007BFF;
+            color: white;
+            width: 100%;
+            padding: 50px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .welcome-section h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .welcome-section p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        /* Dashboard Section */
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px 20px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .dashboard-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .dashboard-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .dashboard-card i {
+            font-size: 50px;
+            color: #007BFF;
+            margin-bottom: 15px;
+        }
+
+        .dashboard-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .dashboard-card p {
+            font-size: 15px;
+            color: #666;
+        }
+
+        /* Call-to-Action Button */
+        .dashboard-card h3:hover {
+            color: #0056b3;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: auto;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        RentEase Landlord Dashboard
+
+        <!-- Profile and Notification Icons -->
+        <div class="header-icons">
+            <i class="fas fa-user-circle" onclick="window.location.href='profile.html'"></i>
+            <i class="fas fa-bell" onclick="window.location.href='notifications.html'"></i>
+        </div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#manage-properties">Manage Properties</a></li>
+            <li><a href="#applications">Rental Applications</a></li>
+            <li><a href="#rent-payments">Rent Payments</a></li>
+            <li><a href="#list-property">List New Property</a></li>
+        </ul>
+    </nav>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+        <h1>Welcome, Landlord!</h1>
+        <p>Manage your properties, view applications, and track rent payments all in one place.</p>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="dashboard">
+        <div class="dashboard-card" onclick="location.href='#manage-properties'">
+            <i class="fas fa-building"></i>
+            <h3>Manage Properties</h3>
+            <p>View, edit, and update your listed rental properties.</p>
+        </div>
+        <div class="dashboard-card" onclick="location.href='#applications'">
+            <i class="fas fa-file-alt"></i>
+            <h3>View Rental Applications</h3>
+            <p>Review and approve rental applications from potential tenants.</p>
+        </div>
+        <div class="dashboard-card" onclick="location.href='#rent-payments'">
+            <i class="fas fa-dollar-sign"></i>
+            <h3>Track Rent Payments</h3>
+            <p>Monitor rental payments and issue payment reminders to tenants.</p>
+        </div>
+        <div class="dashboard-card" onclick="location.href='land details.html'">
+            <i class="fas fa-plus"></i>
+            <h3>List New Property</h3>
+            <p>Post new rental properties and make them available to renters.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 RentEase. All Rights Reserved.
+    </footer>
+
+</body>
+</html>

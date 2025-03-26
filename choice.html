@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Property Platform - User Type Selection</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: linear-gradient(120deg, #e0c3fc, #8ec5fc);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .platform-name {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        /* Container for the selection */
+        .selection-container {
+            background-color: #fff;
+            margin-bottom: 30px;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 600px;
+            text-align: center;
+        }
+
+        /* Title styling */
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        /* Button group styling */
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Button styling */
+        .btn {
+            padding: 15px;
+            background-color: #007BFF;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Button hover state */
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        body {
+            background: linear-gradient(120deg, #e0c3fc, #8ec5fc);
+        }
+
+
+        /* Link styling */
+        .link-text {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .link-text a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .link-text a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Platform Name -->
+    <div class="platform-name">RentEase</div>
+
+    <div class="selection-container">
+        <h2>Select Your Role</h2>
+        <div class="button-group">
+            <button class="btn" onclick="location.href='landlordfornt.html'">I am a Landlord</button>
+            <button class="btn" onclick="location.href='fornt.html'">I am a Tenant</button>
+        </div>
+        <p class="link-text">Already have an account? <a href="/login">Log in here</a></p>
+    </div>
+</body>
+</html>

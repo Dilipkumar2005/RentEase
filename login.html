@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Property Platform - Login</title>
+    
+    <!-- Font Awesome CDN for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #e0c3fc, #8ec5fc);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Page Title styling */
+        .platform-name {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        /* Back Button Styling */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .back-button i {
+            font-size: 24px;
+        }
+
+        /* Container for the login form */
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Box styling for the login form */
+        .login-box {
+            background-color: #fff;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 300px;
+        }
+
+        /* Form title */
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        /* Input group styling */
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        /* Label styling */
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        /* Input field styling */
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        /* Focus state for input */
+        input:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+
+        /* Button styling */
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Button hover state */
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Sign-up text and link */
+        .signup-text {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .signup-text a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        /* Hover state for sign-up link */
+        .signup-text a:hover {
+            text-decoration: underline;
+        }
+
+        .btn-link {
+            color: #fff;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Platform Name -->
+    <div class="platform-name">RentEase</div>
+
+    <!-- Back Button -->
+    <button class="back-button" onclick="history.back()">
+        <i class="fas fa-arrow-left"></i> <!-- Font Awesome icon -->
+    </button>
+
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form action="choice.html" method="GET"> <!-- Assuming choice.html handles login or a server processes it -->
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button class="btn" type="submit">Login</button>
+            </form>
+            <p class="signup-text">Don't have an account? <a href="signup.html">Sign up here</a></p>
+        </div>
+    </div>
+</body>
+</html>

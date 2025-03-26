@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Submission - Landlord</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #e0f7fa, #80deea);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+            padding: 20px;
+        }
+
+        /* Rental platform name */
+        .platform-name {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+       
+
+        /* Back button */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+            color: #f7f9fc;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            color: #f3f6f8;
+        }
+
+        /* Main content section */
+        .main-content {
+            text-align: left;
+            max-width: 600px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 60px; /* Added margin to lower the image slider */
+        }
+
+        /* Horizontal scroll image section */
+        .image-slider-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .image-slider {
+            display: flex;
+            overflow-x: scroll;
+            width: 600px;
+            height: 400px;
+            scroll-behavior: smooth;
+        }
+
+        .image-slider img {
+            min-width: 600px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* Scroll buttons */
+        .scroll-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(138, 140, 144, 0.8);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 20px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .scroll-btn.left {
+            left: 10px;
+        }
+
+        .scroll-btn.right {
+            right: 10px;
+        }
+
+        /* Price and Rating */
+        .price-rating {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .price-rating .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #007BFF;
+            margin-right: 20px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            background-color: #FFD700;
+            padding: 5px 15px;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        /* House details */
+        .details {
+            margin-top: 20px;
+        }
+
+        .details h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #007BFF;
+        }
+
+        .details p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Platform name at the top center -->
+    <div class="platform-name">RentEase - Rental Platform</div>
+
+    <!-- Back button in top left -->
+    <a href="land details.html" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+
+    <!-- Header icons (Profile, Settings, Notification) in top right -->
+    
+
+    <!-- Main content showing house image and details -->
+    <div class="main-content">
+        <!-- Image slider container with scroll buttons -->
+        <div class="image-slider-container">
+            <button class="scroll-btn left" onclick="document.getElementById('imageSlider').scrollLeft -= 600;">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="image-slider" id="imageSlider">
+                <img src="C:\Users\DELL\Downloads\2BHK.jpg" alt="House Image 1">
+                <img src="C:\Users\DELL\Downloads\2BHK side.jpg" alt="House Image 2">
+                <img src="C:\Users\DELL\Downloads\2BHK innerside.webp" alt="House Image 3">
+            </div>
+            <button class="scroll-btn right" onclick="document.getElementById('imageSlider').scrollLeft += 600;">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Price and Rating in the left corner -->
+        <div class="price-rating">
+            <div class="price">₹20,000 / month</div>
+            <div class="rating">4.7/5</div>
+        </div>
+
+        <!-- Details section (location, owner, etc.) -->
+        <div class="details">
+            <h4>Details:</h4>
+            <p>Location: Downtown, City</p>
+            <p>Owner: John Doe</p>
+            <p>Phone: +91 9876543210</p>
+            <p>Description: A beautiful 2BHK apartment located in the heart of the city. The house comes fully furnished with all modern amenities and is available for immediate rental.</p>
+        </div>
+    </div>
+
+</body>
+</html>
